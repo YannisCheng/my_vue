@@ -4,12 +4,21 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export const constantRoutes = [
+    // 当首次进入页面的时候，页面中并没有显示任何内容。这是因为首次进入页面时，它的路径是 '/'。重定向
     {
-        path: '/main/MainPage',
-        name:'main',
+        path: '/',
+        redirect: '/home'
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: () => import('@/views/home/AppIndex')
+    },
+    {
+        path: '/main',
+        name: 'main',
         component: () => import('@/views/main/MainPage')
     },
-
 ]
 
 const createRouter = () => new Router({

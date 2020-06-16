@@ -1,19 +1,19 @@
 <template>
     <div style="color: white" class="main_div_bg">
-        <MainLeftItem :leftData="leftDatas"/>
+        <ShowSingleObject :leftData="leftDatas"/>
         <!--<MainRightItem :rightData="rightDatas"/>-->
     </div>
 </template>
 
 <script>
-    import MainLeftItem from "@/views/main/MainLeftItem";
+    import ShowSingleObject from "@/views/main/ShowSingleObject";
     /*import MainRightItem from "@/views/main/MainRightItem";*/
     import httpService from '@/net/http'
     //import axios from 'axios'
 
     export default {
         name: "main_page",
-        components: {/*MainRightItem, */MainLeftItem},
+        components: {/*MainRightItem, */ShowSingleObject},
         data() {
             return {
                 leftDatas: [],
@@ -46,11 +46,11 @@
                     (resp) =>{
                     window.console.log(resp.data);
                     if (resp.code === 0) {
-                        alert(resp.msg)
+                        //alert(resp.msg)
                         this.leftDatas = resp.data[4]
                         console.log(this.leftDatas[1])
                     } else {
-                        alert(resp.msg)
+                        //alert(resp.msg)
                     }
                 }).catch(error => {
                     if (error.response) {

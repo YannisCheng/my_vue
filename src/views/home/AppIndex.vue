@@ -1,7 +1,7 @@
 <template>
     <div id="to_ximalaya">
-        <div id="div_one" @click="toMainIndex" class="div_basic" style="color: white"> 跳转至——玛雅听声</div>
-        <div id="div_two" class="div_basic" style="color: white"> 暂无</div>
+        <div id="div_one" @click="toMainIndex" class="div_basic" style="color: black"> 跳转——主页</div>
+        <div id="div_two" class="div_basic" style="color: black"> 暂无 </div>
     </div>
 </template>
 
@@ -13,8 +13,9 @@
         },
         methods: {
             toMainIndex() {
-                let url = this.$router.resolve('main_page')
+                let url = this.$router.resolve('main')
                 window.open(url.href,'_blank')
+                this.$router.push({ name: 'main' })
             }
         }
     }
@@ -29,6 +30,5 @@
         width: 100%;
         border: 2px;
         height: 70px;
-        background: #20a0ff;
     }
 </style>

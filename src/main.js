@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import router from './router'
-import MainPage from "@/views/main/MainPage";
+import App from './App'
 
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
 new Vue({
-  render: h => h(MainPage),
+  el: '#app',
+  render: h => h(App),
   router
-}).$mount('#app')
+})
