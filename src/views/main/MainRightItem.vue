@@ -4,7 +4,7 @@
             <li style="list-style: none;height: 80px" v-for="item in rightData" :key="item.type">
                 <div class="right_div_li">
                     <span style="color: black">{{item.name}}</span>
-                    <el-divider class="el_divider_class"/>
+                    <!--<el-divider class="el_divider_class"/>-->
                 </div>
             </li>
         </ol>
