@@ -42,13 +42,12 @@
         methods: {
 
             getData() {
-
                 httpService.get('facility/over/status_list_details?page=1&limit=10000&departmentId=713023015&appliancesClassific=3').then(
                     (resp) =>{
                     window.console.log(resp.data);
                     if (resp.code === 0) {
                         alert(resp.msg)
-                        this.leftDatas = resp.data
+                        this.leftDatas = resp.data[4]
                         console.log(this.leftDatas[1])
                     } else {
                         alert(resp.msg)

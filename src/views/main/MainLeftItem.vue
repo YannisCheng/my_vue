@@ -1,9 +1,9 @@
 <template>
     <div class="left_div">
         <ol>
-            <li class="left_li" style="list-style: none;height: 40px" v-for="item in leftData" :key="item.type">
+            <li class="left_li" style="list-style: none;height: 40px" v-for="(item,index) of leftData" :key="item.pid">
                 <div class="left_div_li">
-                    <span style="color: black">{{item.appliancesName+"-"+item.appliancesCode}}</span>
+                    <span style="color: black">{{index+":"+item.appliancesName+"-"+item.appliancesCode}}</span>
                     <!--<el-divider class="el_divider_class"/>-->
                 </div>
             </li>
