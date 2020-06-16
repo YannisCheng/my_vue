@@ -52,9 +52,9 @@
                         console.log('Error', error.message);
                     }
                     console.log(error.config);
-                    const CancelToken = httpService.CancelToken;
+                    /*const CancelToken = httpService.CancelToken;
                     const source = CancelToken.source();
-                    source.cancel
+                    source.cancel*/
                 });
             }
         },

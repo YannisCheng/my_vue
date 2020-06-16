@@ -1,10 +1,10 @@
 <template>
     <div class="single_div">
-        <ol>
-            <li class="left_li" style="list-style: none;height: 40px" v-for="(value, name, index) of singleData" :key="value.pid">
+        <ol style="padding-inline-start: 0">
+            <li style="list-style: none;height: 40px;" v-for="(value, name, index) of singleData" :key="value.pid">
                 <div class="single_div_li">
                     <!--遍历对象：对象的每一个元素都是一条单独的数据展示-->
-                    <span style="color: black">{{ index }}. {{ name }}: {{ value }}</span>
+                    <span style="color: #000000;">{{ index }}. {{ name }}: {{ value }}</span>
                 </div>
             </li>
         </ol>
@@ -24,10 +24,8 @@
 
 <style scoped>
     .single_div {
+        margin-top: 0;
         background: antiquewhite;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 70%;
     }
 
@@ -35,6 +33,7 @@
         height: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        align-items: start;
     }
 </style>

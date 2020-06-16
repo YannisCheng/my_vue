@@ -1,7 +1,8 @@
 <template>
     <div class="left_div">
-        <ol>
-            <li class="left_li" style="list-style: none;height: 40px" v-for="(item) of datas" :key="item.pid">
+        <ol style="padding-inline-start: 0" >
+            <!--list-style: none 不显示左侧小点-->
+            <li style="list-style: none;" v-for="(item) of datas" :key="item.pid">
                 <div class="left_div_li">
                     <span style="color: black">{{item.appliancesName}}</span>
                 </div>
@@ -23,16 +24,18 @@
 
 <style scoped>
     .left_div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 0;
+        background:darkorange;
         width: 30%;
     }
 
     .left_div_li {
-        height: 20px;
+        margin-top: 0;
+        background: #42b983;
+        height: 40px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 </style>
