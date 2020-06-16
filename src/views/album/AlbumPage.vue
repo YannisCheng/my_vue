@@ -1,11 +1,11 @@
 <template>
-    
+
 </template>
 
 <script>
-    export default {
-        name: "album_page"
-    }
+export default {
+  name: 'album_page'
+}
 </script>
 
 <style scoped>
