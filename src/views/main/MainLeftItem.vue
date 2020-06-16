@@ -1,8 +1,11 @@
 <template>
     <div class="left_div">
         <ol>
-            <li style="list-style: none;" v-for="item in leftData" :key="item.type">
-                <span style="color: black">{{item.name}}</span>
+            <li class="left_li" style="list-style: none;height: 40px" v-for="item in leftData" :key="item.type">
+                <div class="left_div_li">
+                    <span style="color: black">{{item.name}}</span>
+                    <el-divider class="el_divider_class"/>
+                </div>
             </li>
         </ol>
 
@@ -25,5 +28,12 @@
         justify-content: center;
         align-items: center;
         width: 30%;
+    }
+
+    .left_div_li {
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
