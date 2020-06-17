@@ -11,6 +11,11 @@ module.exports = {
               })
               .end()
         })
-    }
+    },
+
+  // 执行build打包，必要修改
+  publicPath: './', // vue-cli3.3+新版本使用
+  outputDir:'dist',
+  assetsDir:'static'
 }
 
