@@ -1,15 +1,16 @@
-// vue.config.js
 module.exports = {
-    css: {
-        loaderOptions: {
-            // 给 sass-loader 传递选项
-            sass: {
-                // @/ 是 src/ 的别名
-                // 所以这里假设你有 `src/variables.scss` 这个文件
-                data: `@import "@/global.scss";
-                  @import "@/其他.scss";`
-
-            }
-        }
+    chainWebpack: config => {
+        const oneOfsMap = config.module.rule('scss').oneOfs.store
+        oneOfsMap.forEach(item => {
+            item
+              .use('sass-resources-loader')
+              .loader('sass-resources-loader')
+              .options({
+                  // 要公用的scss的路径
+                  resources: './src/styles/global.scss'
+              })
+              .end()
+        })
     }
 }
+
