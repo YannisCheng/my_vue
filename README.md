@@ -56,3 +56,5 @@ npm install
 ## 打包时productionSourceMap设置的不同效果
 
  ![](./local_img/productionSourceMap设置的不同效果.png)
+ 
+## vue-devtool 浏览器调试工具
