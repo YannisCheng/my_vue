@@ -51,4 +51,8 @@ npm install
  [启动方式参考](https://www.cnblogs.com/dafei4/p/13027340.html)
  
 ## （build）打包后打开index.html文件时，浏览器里一片空白问题
-[参考](https://blog.csdn.net/Oralinge/article/details/100072765?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase) 
+[参考](https://blog.csdn.net/Oralinge/article/details/100072765?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase)
+
+## 打包时productionSourceMap设置的不同效果
+
+ ![](./local_img/productionSourceMap设置的不同效果.png)
