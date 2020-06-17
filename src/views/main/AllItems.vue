@@ -2,7 +2,7 @@
   <div class="left_div">
     <ol style="padding-inline-start: 0">
       <!--list-style: none 不显示左侧小点-->
-      <li :key="item.pid" style="list-style: none;" v-for="(item) of datas">
+      <li style="list-style: none;" v-for="(item,index) of datas" :key="index" >
         <div class="left_div_li">
           <span style="color: black">{{item.appliancesName}}</span>
         </div>

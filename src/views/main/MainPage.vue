@@ -19,12 +19,41 @@ export default {
     }
   },
 
-  created: function () {
+  beforeCreate () {
+    console.log('beforeCreate')
+  },
+
+  created () {
     // `this` 指向 vm 实例
-    console.log('a is: ' + this.a)
+    console.log('created')
+  },
+
+  beforeMount () {
+    console.log('beforeMount')
+  },
+
+  beforeUpdate () {
+    console.log('beforeUpdate')
+  },
+
+  update () {
+    console.log('update')
+  },
+
+  updated () {
+    console.log('updated')
+  },
+
+  beforeDestroy () {
+    console.log('beforeDestroy')
+  },
+
+  destroyed () {
+    console.log('destroyed')
   },
 
   mounted () {
+    console.log('mounted')
     this.getData()
   },
 
