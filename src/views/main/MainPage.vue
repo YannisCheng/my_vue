@@ -1,7 +1,10 @@
 <template>
   <div class="main_div_bg" style="color: white">
-    <AllItems :datas="allData"/>
-    <ShowSingleObject :singleData="allData[0]"/>
+    <div @click="pushToAlbum" style="height: 100px;width: 100%;background: lightgrey"><span style="color: black;alignment: center">跳转</span></div>
+    <div class="content_display">
+      <AllItems :datas="allData"/>
+      <ShowSingleObject :singleData="allData[0]"/>
+    </div>
   </div>
 </template>
 
@@ -58,6 +61,9 @@ export default {
   },
 
   methods: {
+    pushToAlbum(){
+      this.$router.push({name:'album'})
+    },
 
     getData () {
       httpService.get('facility/over/status_list_details?page=1&limit=10000&departmentId=713023015&appliancesClassific=3').then(
@@ -94,6 +100,11 @@ export default {
 
 <style scoped>
   .main_div_bg {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content_display {
     display: flex;
     flex-direction: row;
   }

@@ -19,6 +19,12 @@ export const constantRoutes = [
     name: 'main',
     component: () => import('@/views/main/MainPage')
   },
+
+  {
+    path: '/album',
+    name: 'album',
+    component: () => import('@/views/album/AlbumPage')
+  },
 ]
 
 const createRouter = () => new Router({
