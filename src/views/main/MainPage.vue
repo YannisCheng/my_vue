@@ -62,7 +62,7 @@ export default {
 
   methods: {
     pushToAlbum(){
-      this.$router.push({name:'album'})
+      this.$router.push({name:'slotSample'})
     },
 
     getData () {

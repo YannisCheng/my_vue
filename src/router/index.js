@@ -21,9 +21,9 @@ export const constantRoutes = [
   },
 
   {
-    path: '/album',
-    name: 'album',
-    component: () => import('@/views/album/AlbumPage')
+    path: '/slotSample',
+    name: 'slotSample',
+    component: () => import('@/views/slotSample/SlotPage')
   },
 ]
 

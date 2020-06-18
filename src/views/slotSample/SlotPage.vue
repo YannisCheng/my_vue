@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import ListIemSlot from '@/views/album/ListIemSlot'
+import ListIemSlot from '@/views/slotSample/ListIemSlot'
 
 export default {
   name: 'album_page',
