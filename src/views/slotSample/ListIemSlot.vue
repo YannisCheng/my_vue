@@ -36,7 +36,7 @@ export default {
   name: 'ListIemSlot',
   data () {
     return {
-      fromParent:'',
+      fromParent: '',
       data: ['zhangsan', 'lisi', 'wanwu', 'zhaoliu', 'tianqi', 'xiaoba']
     }
   },
