@@ -25,6 +25,9 @@
         </li>
       </ol>
     </div>
+
+    <!--直接展示u_data的值-->
+    {{u_data.firstName}}
   </div>
 </template>
 
@@ -36,7 +39,7 @@ export default {
       data: ['zhangsan', 'lisi', 'wanwu', 'zhaoliu', 'tianqi', 'xiaoba']
     }
   },
-  props: ['arrayData']
+  props: ['arrayData','u_data']
 }
 </script>
 

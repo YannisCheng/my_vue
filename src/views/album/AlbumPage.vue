@@ -2,7 +2,7 @@
   <div style="width: 100%">
 
     <!--展示 'ListIemSlot' 组件内部各种slot-->
-    <ListIemSlot v-bind:array-data="arrayData">
+    <ListIemSlot v-bind:array-data="arrayData" v-bind:u_data="user">
 
       <!--下面这种写法是'<template v-slot:default>'的简写-->
       <template>
