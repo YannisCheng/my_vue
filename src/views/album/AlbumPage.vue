@@ -1,8 +1,8 @@
 <template>
   <div style="width: 100%">
-
+  <el-button @click="changeChildView">点击在子Vue组件中显示数据</el-button>
     <!--展示 'ListIemSlot' 组件内部各种slot-->
-    <ListIemSlot v-bind:array-data="arrayData" v-bind:u_data="user">
+    <ListIemSlot ref="listVue" v-bind:array-data="arrayData" v-bind:u_data="user">
 
       <!--下面这种写法是'<template v-slot:default>'的简写-->
       <template>
@@ -64,6 +64,11 @@ export default {
       ],
     }
   },
+  methods:{
+    changeChildView () {
+      this.$refs.listVue.fromParent = '父组通过自身的点击事件修改了子组件的变量数值'
+    },
+  }
 }
 </script>
 

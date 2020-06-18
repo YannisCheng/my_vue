@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <span>{{fromParent}}</span>
     <h5>
       <slot></slot>
     </h5>
@@ -36,10 +36,16 @@ export default {
   name: 'ListIemSlot',
   data () {
     return {
+      fromParent:'',
       data: ['zhangsan', 'lisi', 'wanwu', 'zhaoliu', 'tianqi', 'xiaoba']
     }
   },
-  props: ['arrayData','u_data']
+  props: ['arrayData', 'u_data'],
+  methods: {
+    setBackground () {
+      this.fromParent = ''
+    },
+  }
 }
 </script>
 
